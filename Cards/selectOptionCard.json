@@ -1,0 +1,29 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.1",
+  "speak" :  "Select Option",
+  "body": [
+    {
+      "type": "Input.ChoiceSet",
+      "id": "selectOption",
+      "choices": [
+        {
+          "$data": "${list}",
+          "title": "${Name}",
+          "value": "${Id}"
+        }
+      ],
+      "placeholder": "Please choose"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Choose",
+      "data": {
+        "action": "Choose"
+      }
+    }
+  ]
+}

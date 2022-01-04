@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.1",
+  "fallbackText": "This card requires Media to be viewed. Ask your platform to update to Adaptive Cards v1.1 for this and more!",
+  "body": [
+    {
+      "type": "Media",
+      "poster": "http://i3.ytimg.com/vi/YvBLS0p4ITs/hqdefault.jpg",
+      "sources": [
+        {
+          "mimeType": "video/mp4",
+          "url": "https://cfbgeneralblob.blob.core.windows.net/cfbblobcontainer/y2meta.com%20-%20BIBD%20Debit%20Card%20-%20Activation%20and%20PIN%20Creation.mp4"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "BIBD Debit Card - Activation and PIN Creation",
+      "wrap": true,
+      "weight": "Bolder",
+      "size": "Medium",
+      "horizontalAlignment": "Center"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "See more tutorial",
+      "url": "https://www.youtube.com/channel/UCw4ye1_XvN5o0AF3zCqg6gA"
+    }
+  ]
+}

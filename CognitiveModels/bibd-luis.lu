@@ -1,0 +1,133 @@
+
+> LUIS application information
+> !# @app.name = bibd-luis
+> !# @app.desc = Luis Model for CoreBot
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 7.0.0
+> !# @app.tokenizerVersion = 1.0.0
+
+
+> # Intent definitions
+
+# AccountRecommend
+- recommend account
+- recommend me an account that best suit my needs
+
+
+# BookFlight
+- book a flight
+- book a flight from {@From=new york}
+- book a flight from {@From=seattle}
+- book flight from {@From=london} to {@To=paris} on feb 14th
+- book flight to {@To=berlin} on feb 14th
+- book me a flight from {@From=london} to {@To=paris}
+- flight to {@To=paris}
+- flight to {@To=paris} from {@From=london} on feb 14th
+- fly from {@From=berlin} to {@To=paris} on may 5th
+- go to {@To=paris}
+- going from {@From=paris} to {@To=berlin}
+- travel from {@From=new york} to {@To=paris}
+- travel to {@To=new york}
+- travel to {@To=paris}
+
+
+# Cancel
+- bye
+- cancel booking
+- exit
+- ignore
+
+
+# CreditCard
+- credit card
+- i want to know more about credit card
+- what types of credit card do you offer?
+
+
+# DebitCard
+- activate debit card
+- active debit card
+- debit card
+- i don't want use debit card anymore
+- i lost my debit card
+- i want to active debit card
+
+
+# GetWeather
+- what's the forecast for this friday?
+- what's the weather like for tomorrow
+- what's the weather like in new york
+- what's the weather like?
+
+
+# None
+- book a hotel in new york
+- book a restaurant
+- find an airport near me
+- i'd like to rent a car
+- winter is coming
+
+
+# Promotion
+- promotion
+- promotions
+
+
+> # Entity definitions
+
+
+> # PREBUILT Entity definitions
+
+@ prebuilt datetimeV2
+
+
+> # Phrase list definitions
+
+@ phraselist action(interchangeable) disabledForAllModels = 
+	- Active,Deactive,Block,Check
+
+
+> # List entities
+
+@ list Action = 
+	- Active :
+		- active
+		- want to use
+		- want to have
+		- activate
+	- Deactive :
+		- don't want use it anymore
+		- deactive
+	- Block :
+		- lost
+		- remove
+		- block
+		- don't want use
+
+
+@ list Airport = 
+	- Paris :
+		- paris
+		- cdg
+	- London :
+		- london
+		- lhr
+	- Berlin :
+		- berlin
+		- txl
+	- New York :
+		- new york
+		- jfk
+	- Seattle :
+		- seattle
+		- sea
+
+
+> # RegEx entities
+
+
+> # Composite entities
+
+@ composite From = [Airport]
+@ composite To = [Airport]

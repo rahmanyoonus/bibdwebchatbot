@@ -1,0 +1,9 @@
+{
+  "modelPath": "D:\\Work\\Think-axis\\BIBD_ChatBot\\Code\\model",
+  "snapshotPath": "D:\\Work\\Think-axis\\BIBD_ChatBot\\Code\\generated\\orchestrator.blu",
+  "dataSources": {
+    "hierarchical": false,
+    "inputs": [],
+    "path": ""
+  }
+}

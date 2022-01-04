@@ -1,0 +1,50 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.1",
+  "speak": "<s>Your  meeting about \"Adaptive Card design session\"<break strength='weak'/> is starting at ${formatDateTime(start.dateTime, 'HH:mm')}pm</s><s>Do you want to snooze <break strength='weak'/> or do you want to send a late notification to the attendees?</s>",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Appointment Info",
+      "size": "Large",
+      "weight": "Bolder",
+      "style": "heading"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Purpose: ${purpose} ",
+      "isSubtle": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Type: ${type} ",
+      "isSubtle": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "**Name:**",
+          "value": "${fullName}"
+        },
+        {
+          "title": "**Phone:**",
+          "value": "${phone}"
+        },
+        {
+          "title": "**Email:**",
+          "value": "${email}"
+        },
+        {
+          "title": "**Branch:**",
+          "value": "${branch}"
+        },
+        {
+          "title": "**Date & Time:**",
+          "value": "${dateTime}"
+        }
+      ]
+    }
+  ]
+}
